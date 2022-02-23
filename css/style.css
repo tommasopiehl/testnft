@@ -17,6 +17,10 @@
   --header-shadow: #000 0px 0px 5px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
