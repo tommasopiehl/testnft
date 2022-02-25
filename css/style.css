@@ -14,6 +14,7 @@
   --btn-bg-color: #ffc400;
   --accent-color: #c941ff;
   --roadmap-color: #7eabff;
+  --name-color:rgb(0, 0, 0)f;
   --header-shadow: #000 0px 0px 5px;
 }
 
@@ -65,6 +66,36 @@ body {
   width: 400px;
   height: 400px;
   background: url("file:///Users/tommaso/Downloads/leggif.gif") 0 0;
+}
+
+#cyber {
+  position: relative;
+  right: 28px;
+  width: 300px;
+  height: 300px;
+  background: url("file:///Users/tommaso/Downloads/cyberlogo.png") 0 0;
+}
+
+#bunny {
+  position: relative;
+  right: 28px;
+  width: 300px;
+  height: 300px;
+  background: url("file:///Users/tommaso/Downloads/bunnylogo.png") 0 0;
+}
+
+#jason {
+  position: relative;
+  right: 28px;
+  width: 300px;
+  height: 300px;
+  background: url("file:///Users/tommaso/Downloads/jasonlogo.png") 0 0;
+}
+
+#theboys {
+  margin:0 auto;
+  border:0px solid;
+  display:block;
 }
 
 .container {
@@ -301,6 +332,28 @@ header .container {
   box-shadow: none;
 }
 
+.btn2 {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  padding: 1rem 2rem;
+  background: var(--btn-bg-color);
+  color: var(--accent-color);
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 0 var(--accent-color);
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+.btn2:hover {
+  box-shadow: none;
+}
+
 .wallet-btn {
   border-radius: 5rem;
   margin-left: 2rem;
@@ -311,6 +364,10 @@ header .container {
   border-radius: 4px;
   font-size: 1.2rem;
   padding: 1.5rem 3rem;
+}
+
+.boy-btn {
+  border-radius: 200px;
 }
 
 .about p {
@@ -332,6 +389,57 @@ header .container {
   font-size: 3.5rem;
   text-align: center;
 }
+
+
+
+/* Us */
+
+.fuegoboys
+{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.fuegoboys h1 {
+  color: var(--accent-color);
+  text-shadow: 2px 2px 0 var(--btn-bg-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.tommaso{
+  float: left;
+  margin:20px;
+  text-align: center;
+}
+
+.tommaso p {
+  font-size: 1.3rem;
+  color: var(--name-color);
+  font-family: var(--font-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.felix{
+  float: left;
+  margin:20px;
+  text-align: center;
+}
+
+.felix p {
+  font-size: 1.3rem;
+  color: var(--name-color);
+  font-family: var(--font-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 
 
 /* COUNTDOWN SECTION */
