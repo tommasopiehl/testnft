@@ -53,8 +53,8 @@ body {
 }
 
 #botlogo{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 #top {
@@ -97,6 +97,7 @@ body {
 .contact_btn:hover{
   transform: scale(1.3);
 }
+
 /* HEADER */
 
 header {
@@ -113,11 +114,28 @@ header .container {
 
 .menu {
   display: flex;
-  gap: 7rem;
+  justify-content: center;
   align-items: center;
+
+}
+
+.talktous h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.botmenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .above {
+  align-items: center;
+  justify-content: center;
   top:-10px;
   display: flex;
   flex-direction: row;
@@ -130,19 +148,19 @@ header .container {
 .A img {
   overflow: hidden;
   position: relative;
-  animation: firstmove linear 15s infinite;
+  /* animation: firstmove linear 15s infinite; */
 }
 
 .B img {
   overflow: hidden;
   position: relative;
-  animation: firstmove linear 15s infinite;
+  /* animation: firstmove linear 15s infinite; */
 }
 
 .C img {
   overflow: hidden;
   position: relative;
-  animation: firstmove linear 15s infinite;
+  /* animation: firstmove linear 15s infinite; */
 }
 
 @keyframes firstmove 
@@ -152,6 +170,8 @@ header .container {
 }
 
 .below {
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -162,19 +182,19 @@ header .container {
 .X img {
   overflow: hidden;
   position: relative;
-  animation: secondmove linear 15s infinite;
+  /* animation: secondmove linear 15s infinite; */
 }
 
 .Y img {
   overflow: hidden;
   position: relative;
-  animation: secondmove linear 15s infinite;
+  /* animation: secondmove linear 15s infinite; */
 }
 
 .Z img {
   overflow: hidden;
   position: relative;
-  animation: secondmove linear 15s infinite;
+  /* animation: secondmove linear 15s infinite; */
 }
 
 @keyframes secondmove 
@@ -279,8 +299,12 @@ header .container {
 
 /* CONTACT */
 
+.contact{
+  background-color: #000;
+}
+
 .contact h1 {
-  color: var(--font-color);
+  color: var(--btn-bg-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   margin: 2rem 0;
   font-size: 3.5rem;
