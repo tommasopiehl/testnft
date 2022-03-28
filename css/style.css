@@ -3,21 +3,23 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap'); */
 @font-face { font-family: Eina; src: url('Eina01-Bold.ttf'); } 
 @font-face { font-family: Eina; font-weight: bold; src: url('Eina01-Bold.ttf');}
-@font-face { font-family: Einalight; src: url('Eina01-Light.ttf'); } 
-@font-face { font-family: Einalight; font-weight: bold; src: url('Eina01-Light.ttf');}
+@font-face { font-family: Urban; src: url('urbanrebel.ttf'); } 
+@font-face { font-family: Urban; font-weight: bold; src: url('urbanrebel.ttf');}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 /* GLOBAL STYLES */
 
 :root {
   --font-primary: 'Eina', sans-serif;
-  --font-secondary: 'Einalight', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --font-urban: 'Urban', sans-serif;
   --bg-color: #ffffff;
   --font-color: #000;
-  --header-color: #000;
-  --btn-bg-color: #fea21a;
+  --header-color: #c30000;
+  --btn-bg-color: #c30000;
   --banner-color: rgb(163, 206, 255);
   --banner-color2: rgb(218, 60, 21);
   --roadmap-color: #000;
-  --header-shadow: #000 0px 0px 100px;
+  --header-shadow: #c30000 0px 0px 200px;
   --banner-shadow: #fea21a 0px 0px 20px;
 }
 
@@ -33,7 +35,6 @@ body {
   flex-flow: column;
   height: 100vh;
   color: var(--font-color);
-  font-family: var(--font-primary);
 }
 
 .gif{
@@ -48,7 +49,7 @@ body {
 }
 
 #headlogo{
-  width: 50px;
+  width: 40px;
   height: 50px;
 }
 
@@ -58,6 +59,11 @@ body {
 }
 
 #top {
+  width: 100%;
+  height: 100%;
+}
+
+#join {
   width: 100%;
   height: 100%;
 }
@@ -79,12 +85,9 @@ body {
   height: 80px;
 }
 
-
 .container2 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
-  margin-top: 50px;
 }
 
 .contact{
@@ -107,9 +110,17 @@ header {
 }
 
 header .container {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+header .container p{
+  font-style: italic;
+  font-family: var(--font-urban);
+  font-size: 3rem;
+  color: #ffffff;
 }
 
 .menu {
@@ -119,14 +130,6 @@ header .container {
 
 }
 
-.talktous h1{
-  display: flex;
-  justify-content: center;
-  font-size: 3.5rem;
-  align-items: center;
-  margin-bottom: 3%;
-}
-
 .botmenu {
   display: flex;
   flex-direction: row;
@@ -134,41 +137,45 @@ header .container {
   justify-content: center;
 }
 
-.above {
-  align-items: center;
+.joinbutton{
+  height: 60%;
+  margin-top: -10%;
+  margin-bottom: -5%;
+  display: flex;
   justify-content: center;
-  top:-10px;
+  z-index: 0;
+}
+
+.joinbutton h1{
+  z-index: -1;
+}
+
+.banner {
   display: flex;
   flex-direction: row;
-  position: relative;
-  background-color: var(--btn-bg-color);
-  box-shadow: var(--banner-shadow);
+  gap: 100%;
+}
+
+.A {
+  font-family: var(--font-primary);
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 2.0rem;
+  position: absolute;
+  top: 85%;
+  left: -350px;
+  animation: move 15s linear 2s infinite;
+  width: 400px;
+  text-align: center;
+  z-index: -2;
 }
 
 
-.A img {
-  overflow: hidden;
-  position: relative;
-  /* animation: firstmove linear 15s infinite; */
+@keyframes move{
+  from {left: -350px;}
+  to {left: 77%;}
 }
 
-.B img {
-  overflow: hidden;
-  position: relative;
-  /* animation: firstmove linear 15s infinite; */
-}
-
-.C img {
-  overflow: hidden;
-  position: relative;
-  /* animation: firstmove linear 15s infinite; */
-}
-
-@keyframes firstmove 
-{
-  0% { right: -2000px }
-  100% { right: 2000px }
-}
 
 .below {
   align-items: center;
@@ -177,32 +184,9 @@ header .container {
   flex-direction: row;
   position: relative;
   background-color: var(--btn-bg-color);
+  box-shadow: var(--header-shadow);
 }
 
-
-.X img {
-  overflow: hidden;
-  position: relative;
-  /* animation: secondmove linear 15s infinite; */
-}
-
-.Y img {
-  overflow: hidden;
-  position: relative;
-  /* animation: secondmove linear 15s infinite; */
-}
-
-.Z img {
-  overflow: hidden;
-  position: relative;
-  /* animation: secondmove linear 15s infinite; */
-}
-
-@keyframes secondmove 
-{
-  0% { right: 1250px }
-  100% { right: -1250px }
-}
 
 .about{
   width: 100%;
@@ -219,12 +203,13 @@ header .container {
   margin-bottom: 3%;
 }
 
-.about h2{
-  width: 60%;
+.about p{
+  width: 90%;
+  font-family: var(--font-secondary);
   color: var(--font-color);
-  font-size: 1rem;
-  font-style: var(--font-secondary);
+  font-size: 1.5rem;
   text-align: center;
+  font-weight: lighter;
 }
 
 .T{
@@ -245,10 +230,20 @@ header .container {
   margin-bottom: 5%;
 }
 
-.us h1{
+.profiles h2{
+  width: 90%;
+  font-family: var(--font-secondary);
   color: var(--font-color);
-  font-size: 3.5rem;
-  text-align: left;
+  font-size: 1.0rem;
+  text-align: center;
+}
+
+.profiles p{
+  font-family: var(--font-secondary);
+  color: var(--font-color);
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: lighter;
 }
 
 
@@ -284,6 +279,14 @@ header .container {
   transform: scale(1.3);
 }
 
+.joinbtn{
+  transition: all 0.3s ease;
+}
+
+.joinbtn:hover {
+  transform: scale(1.3);
+}
+
 .wallet-btn {
   border-radius: 4px;
   margin-left: 2rem;
@@ -296,15 +299,6 @@ header .container {
   padding: 1.5rem 3rem;
 }
 
-
-.about p {
-  font-size: 2rem;
-  color: var(--bg-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
-  font-family: var(--font-primary);
-  margin-bottom: 2rem;
-  text-align: center;
-}
 
 /* CONTACT */
 
