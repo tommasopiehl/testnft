@@ -176,7 +176,6 @@ header .container p{
   to {left: 77%;}
 }
 
-
 .below {
   align-items: center;
   justify-content: center;
@@ -187,11 +186,9 @@ header .container p{
   box-shadow: var(--header-shadow);
 }
 
-
 .about{
-  width: 80%;
+  margin-top:5%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -199,7 +196,7 @@ header .container p{
 .about p{
   width: 90%;
   font-family: var(--font-secondary);
-  color: var(--bg-color);
+  color: #000;
   font-size: 1.5rem;
   text-align: center;
   font-weight: lighter;
