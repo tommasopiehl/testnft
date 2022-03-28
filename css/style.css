@@ -101,12 +101,12 @@ body {
 /* HEADER */
 
 header {
+  width: auto;
   background-color: var(--header-color);
   box-shadow: var(--header-shadow);
 }
 
 header .container {
-  margin-left: 900px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
