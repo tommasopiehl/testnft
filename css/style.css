@@ -64,8 +64,8 @@ body {
 }
 
 #join {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 70%;
 }
 
 #profile {
@@ -137,17 +137,16 @@ header .container p{
   justify-content: center;
 }
 
-.joinbutton{
-  height: 40%;
-  width: 100%;
+.community{
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  z-index: 0;
-  background-color:#c30000;
+  padding-left: 3%;
 }
 
-.joinbutton h1{
-  z-index: -1;
+.joinbtn{
+  display: flex;
+  z-index: 0;
 }
 
 .banner {
@@ -187,18 +186,34 @@ header .container p{
 }
 
 .about{
-  margin-top:5%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.aboutrigth{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.about h1{
+  padding-left: 3%;
+  font-family: var(--font-primary);
+  height: 100%;
+  width: 40%;
+  font-size: 6rem;
+  font-weight: bolder;
+}
+
 .about p{
-  width: 90%;
+  height: 90%;
+  width: 30%;
   font-family: var(--font-secondary);
   color: #000;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
   font-weight: lighter;
 }
 
@@ -216,8 +231,10 @@ header .container p{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
+  justify-content: right;
+  padding: 10%;
+  padding-right: 10%;
+
 }
 
 .profiles h2{
@@ -270,11 +287,12 @@ header .container p{
 }
 
 .joinbtn{
-  transition: all 0.3s ease;
+  height: 100%;
 }
 
 .joinbtn:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .wallet-btn {
