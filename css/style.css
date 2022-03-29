@@ -37,17 +37,6 @@ body {
   color: var(--font-color);
 }
 
-.gif{
-  display:inline-block; 
-  align-self: center;
-}
-
-#gif {
-  width: 500px;
-  height: 500px;
-  background: url("file:///Users/tommaso/nft-landing-page/images/x-icon/labelgif.gif") 0 0;
-}
-
 #headlogo{
   width: 40px;
   height: 50px;
@@ -63,14 +52,14 @@ body {
   height: 100%;
 }
 
-#join {
-  width: 80%;
-  height: 70%;
-}
-
 #profile {
   width: 100%;
   height: 200px;
+}
+
+#lazy{
+  width: 400px;
+  height: 450px;
 }
 
 #movingmini
@@ -79,11 +68,11 @@ body {
   height: 80px;
 }
 
-#movingtext
-{
-  width: 400px;
-  height: 80px;
+#join{
+  width: 70%;
+  height: 70%;
 }
+
 
 .container2 {
   display: flex;
@@ -123,38 +112,6 @@ header .container p{
   color: #ffffff;
 }
 
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.botmenu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.community{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-left: 3%;
-}
-
-.joinbtn{
-  display: flex;
-  z-index: 0;
-}
-
-.banner {
-  display: flex;
-  flex-direction: row;
-  gap: 100%;
-}
-
 .A {
   font-family: var(--font-primary);
   font-weight: bolder;
@@ -169,11 +126,20 @@ header .container p{
   z-index: -2;
 }
 
-
-@keyframes move{
-  from {left: -350px;}
-  to {left: 77%;}
+.community{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
+
+.community .join{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 
 .below {
   align-items: center;
@@ -185,64 +151,76 @@ header .container p{
   box-shadow: var(--header-shadow);
 }
 
+
+
 .about{
+  padding-top: 50px;
+  width: 70%;
   display: flex;
+  flex-wrap: wrap;
+  margin: auto;
   align-items: center;
-  justify-content: left;
-  flex-direction: row;
 }
 
-.aboutrigth{
+.about .text{
+  padding: 0px;
+  width: 33.2%;
+  min-width: 300px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
 }
 
-.about h1{
-  padding-left: 3%;
+.about .text h1{
   font-family: var(--font-primary);
-  height: 100%;
-  width: 40%;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: bolder;
 }
 
-.about p{
-  height: 90%;
-  width: 30%;
+.about .text p{
+  padding-right: 1%;
   font-family: var(--font-secondary);
   color: #000;
-  font-size: 1.5rem;
-  text-align: left;
+  font-size: 2rem;
   font-weight: lighter;
+}
+
+.lower{
+
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: left;
+}
+
+.lower .profiles{
+  padding: 0px;
+  width: 33.2%;
+  min-width: 300px;
+  display: flex;
+  flex: 1;
+}
+
+.lower .profiles h1{
+  padding-top: 5%;
+  width: 60%;
+  font-family: var(--font-primary);
+  font-size: 5rem;
+  font-weight: bolder;
 }
 
 .T{
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.T h2{
-  margin-top: -30px;
-}
-
-.profiles{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: right;
-  padding: 10%;
-  padding-right: 10%;
-
+  align-items: left;
 }
 
 .profiles h2{
-  width: 90%;
   font-family: var(--font-secondary);
   color: var(--font-color);
   font-size: 1.0rem;
   text-align: center;
+  
 }
 
 .profiles p{
@@ -251,6 +229,12 @@ header .container p{
   font-size: 0.9rem;
   text-align: center;
   font-weight: lighter;
+}
+
+.lazylogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -286,14 +270,14 @@ header .container p{
   transform: scale(1.3);
 }
 
-.joinbtn{
-  height: 100%;
+.join{
+  transition: all 0.3s ease;
 }
 
-.joinbtn:hover {
+.join:hover {
   transform: scale(1.1);
-  transition: all 0.3s ease-in-out 0s;
 }
+
 
 .wallet-btn {
   border-radius: 4px;
