@@ -165,6 +165,7 @@ header .container p{
 }
 
 .about .text h1{
+  width: 70%;
   padding-bottom: 5%;
   font-family: var(--font-primary);
   font-size: 5rem;
