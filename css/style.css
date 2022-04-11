@@ -43,10 +43,8 @@ body {
 }
 
 #cmnsoon{
-  position: relative;
-  left: -25px;
-  width: 400px;
-  height: 350px;
+  width: 350px;
+  height: 300px;
 }
 
 #botlogo{
@@ -136,6 +134,7 @@ header .container p{
   padding-top: 2%;
   width: 70%;
   display: flex;
+
   flex-wrap: wrap;
   margin: auto;
   flex-direction: row;
@@ -145,6 +144,7 @@ header .container p{
 .comingsoon .rowitem{
   min-width: 200px;
   display: flex;
+  justify-items: center;
   flex: 1;
 }
 
