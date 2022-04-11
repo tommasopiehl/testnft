@@ -43,8 +43,6 @@ body {
 }
 
 #cmnsoon{
-  position: relative;
-  left: -40px;
   width: 350px;
   height: 300px;
 }
@@ -113,7 +111,7 @@ body {
 /* HEADER */
 
 header {
-  width: auto;
+  width: 100%;
   background-color: var(--header-color);
   box-shadow: var(--header-shadow);
 }
@@ -139,13 +137,12 @@ header .container p{
   flex-wrap: wrap;
   margin: auto;
   flex-direction: row;
-  align-items: center;
 }
 
 .comingsoon .rowitem{
   max-width: 600px;
   display: flex;
-  justify-items: center;
+  align-items: center;
   flex: 1;
 }
 
@@ -193,6 +190,7 @@ header .container p{
   flex-wrap: wrap;
   margin: auto;
   align-items: left;
+  left: 50%;
 }
 
 .lower .profiles{
