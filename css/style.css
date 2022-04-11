@@ -42,6 +42,13 @@ body {
   height: 50px;
 }
 
+#cmnsoon{
+  position: relative;
+  left: -25px;
+  width: 400px;
+  height: 350px;
+}
+
 #botlogo{
   width: 150px;
   height: 150px;
@@ -76,11 +83,6 @@ body {
 #biglink{
   width: 100%;
   height: 100%;
-}
-
-#cmnsoon{
-  width: 400px;
-  height: 330px;
 }
 
 .menu{
@@ -130,6 +132,29 @@ header .container p{
   color: #ffffff;
 }
 
+.comingsoon{
+  padding-top: 2%;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comingsoon .rowitem{
+  min-width: 200px;
+  display: flex;
+  flex: 1;
+}
+
+.comingsoon .rowitem p{
+  font-family: var(--font-secondary);
+  font-weight: lighter;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 
 .community{
   padding-top: 2%;
@@ -159,25 +184,7 @@ header .container p{
   box-shadow: var(--header-shadow);
 }
 
-.about{
-  padding: 1%;
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-  align-items: center;
-}
 
-
-.about .text p{
-  font-family: var(--font-secondary);
-  color: #000;
-  font-size: 1.5rem;
-  font-weight: lighter;
-  width: 400px;
-  text-align: center;
-}
 
 .lower{
   width: 70%;
