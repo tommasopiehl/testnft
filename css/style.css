@@ -43,6 +43,8 @@ body {
 }
 
 #cmnsoon{
+  position: relative;
+  left:-42px;
   width: 350px;
   height: 300px;
 }
