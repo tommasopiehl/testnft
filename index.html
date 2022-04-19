@@ -6,6 +6,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).bind("load resize scroll", function() {
+  $(".bg-static").each(function() {
+    var windowTop = $(window).scrollTop();
+    var elementTop = $(this).offset().top;
+    var leftPosition = elementTop - windowTop ;
+      $(this)
+        .find(".bg-move")
+        .css({ right: leftPosition });
+  });
+  });
+    </script>
+    <script type="text/javascript">
+      $(window).bind("load resize scroll", function() {
+  $(".moving").each(function() {
+  var div1 = document.getElementsByClassName("beerbg")[0];
+  var div2 = document.getElementsByClassName("winebg")[0];
+
+  var rect1 = div1.getBoundingClientRect();
+  var rect2 = div2.getBoundingClientRect();
+  
+    
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var windowTop = $(window).scrollTop();
+  var elementTop = $(this).offset().top;
+  var leftPositionA = elementTop - windowTop*1100/width ;
+  var leftPositionB = elementTop - windowTop*1700/width  ;
+  console.log(leftPositionA /width);
+  if(leftPositionB/width > -0.02){
+    $(this)
+      .find(".winebg")
+      .css({ left: leftPositionB });
+  }
+  if(leftPositionA /width > 0.175){
+    $(this)
+      .find(".beerbg")
+      .css({ right: leftPositionA });
+  }
+    // $(this)
+    //   .find(".cheers")
+    //   .css({ right: leftPositionB*0.8});
+  
+    })});
+</script>
+<script type="text/javascript">
+  
+</script>
 
     <!-- favicon -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png">
@@ -18,75 +67,84 @@
     <header>
       <div class="container">
         <div class="logo">
-          <!-- <a href="/">
-            <img src="images/x-icon/favicon-32x32.png" alt="logo" />
-          </a> -->
         </div>
         <div class="menu">
-          <!-- <a
-            class="contact_btn"
-            href="https://discord.gg/eCaM9TS7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="images/x-icon/discord.PNG" alt="Discord" id="headlogo"  />
-          </a> -->
           <a
-          class="contact_btn"
+            class="contact_btn"
             href="https://twitter.com/lazylabelsNFT"
             target="_blank"
             rel="noopener noreferrer">
             <img src="images/x-icon/twitter.PNG" alt="Twitter" id="headlogo" />
           </a>
-          <!-- <a
-            class="contact_btn"
-            href="https://testnets.opensea.io/login?referrer=%2Faccount"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src="images/x-icon/opensea.PNG" alt="Opensea" id="headlogo"  />
-          </a> -->
         </div>
       </div>
     </header>
 
-    <div class="top"> 
+
+    <section class="banner">
+    <div class="banner_wrapper">
+      <div class="moving-content">
+        <ul id="group-1">
+          <li class="cloud-1"><h2>COMING SOON   COMING SOON   COMING SOON</h2></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <section class="top">
       <img id="top" src="images/x-icon/top2.png">
-    </div>
-  
-    <section class="comingsoon">
-    <div class="rowitem">
-    <img id="cmnsoon" src="images/x-icon/cmnsoon.PNG">
-    </div>
-    <div class="rowitem">
-    <p>Lazy Labels is a completely art-based project in which we hope to
-          bring innovation and aestetic pleasure to the blockchain. We aim to express ourselves 
-          through the design of cans and bottles, tokens of celebration and coomunity.
-          Follow us on twitter and look out for our discord server to find out more.
-    </p>
-    </div>
-    </div>
     </section>
 
-      <div class="community">
+    <section class="comingsoon">
+    <div class="colitem">
+    <h2>ABOUT</h2>
+    <p>Lazy Labels is a completely art-based project in which we hope to
+      bring innovation and aestetic pleasure to the blockchain. We aim to express ourselves 
+      through the design of cans and bottles, tokens of celebration and coomunity.
+      Follow us on twitter and look out for our discord server to find out more.
+  </p>
+  </div>
+    <!--  -->
+    <div class="moving">
+      <div class="cheers">
+        <img id="cheers" src="images/x-icon/cheers.png">
+      </div>
+      <div class="beerbg"></div>
+      <div class="winebg"></div>
+    </div>
+    </div>
+  </section>
+    
+
+      <section class="community">
+        <div class="rowitem">
         <div class="link">
         <a href="https://twitter.com/lazylabelsNFT" target="_blank" rel="noopener noreferrer" class="linkbtn"
-            ><img src="images/x-icon/twittercan.PNG" id="biglink" />
+            ><img src="images/x-icon/twitterlink.PNG" id="biglink" />
           </a>
         </div>
-        <div class="link">
-          <a  target="_blank" rel="noopener noreferrer" class="linkbtn"
-          ><img src="images/x-icon/disccomingsoon.PNG" id="biglink" />
-        </a>
-       </div>
+        <div class="linkB">
+          <a href="https://twitter.com/lazylabelsNFT" target="_blank" rel="noopener noreferrer"
+              ><img src="images/x-icon/discordlink.PNG" id="biglink" />
+            </a>
+          </div>
       </div>
+    </section>
 
-      <div class="lower">
-        <div class="profiles">
-          <img src="images/x-icon/lazyboylogo.PNG" id="cmnsoon" />
+    <div class="shelf">
+      <img src="images/x-icon/shelfmy.PNG" id="shelf" />
     </div>
+
+      <section class="lower">
+        <div class="bg-static">
+          <div class="bg-move"></div>
+        </div>
+        <div class="profileslogo">
+          <img src="images/x-icon/thelazyboys.PNG" id="cmnsoon" />
+        </div>
       <div class="profiles">
       <div class="profilespair">  
-      <div class="T">
+      <div class="W">
       <a
       href="https://twitter.com/nftmaso"
       class="lazyboys">
@@ -95,7 +153,7 @@
         <h2>Tommaso</h2>
         <p>Head engineer</p>
         </div>
-        <div class="T">
+        <div class="B">
           <a
           href="https://twitter.com/Felixnftjourney"
           class="lazyboys">
@@ -106,7 +164,7 @@
         </div>
       </div>
       <div class="profilespair"> 
-        <div class="T">
+        <div class="W">
           <a
           href="https://twitter.com/NThjelmer"
           class="lazyboys">
@@ -115,7 +173,7 @@
         <h2>Hjalmar</h2>
         <p>Marketing advisor</p>
         </div>
-        <div class="T">
+        <div class="B">
           <a
           href="https://twitter.com/NFTLudvig"
           class="lazyboys">
@@ -126,20 +184,17 @@
         </div>
     </div>
   </div>
-  </div>
+</section>
 
   <div class="lazylogo">
     <img src="images/x-icon/lazy.png" alt="Twitter" id="lazy" />
   </div>
 
-  <div class="below">
-    <!-- <div class="Y">
-      <img class="first" id="movingtext" src="images/x-icon/drinkresponsibly.png">
-    </div> -->
+  <section class="below">
     <div class="Z">
       <img class="first" id="movingmini" src="images/x-icon/minibanner.png">
       </div>
-  </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
     <script src="js/countdown.js"></script>
