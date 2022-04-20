@@ -322,8 +322,9 @@ ul li {
   font-family: var(--font-primary);
   font-size:3rem;
   font-style: italic;
-  -webkit-text-stroke: 1.5px #ffb100;
-  -webkit-text-fill-color: white;
+  color:white;
+  /* -webkit-text-stroke: 1.5px #ffb100;
+  -webkit-text-fill-color: white; */
 }
 
 .community .rowitem{
@@ -500,8 +501,9 @@ ul li {
     font-family: var(--font-primary);
     font-size:2rem;
     font-style: italic;
-    -webkit-text-stroke: 1.5px #ffb100;
-    -webkit-text-fill-color: white;
+    color:white;
+  /* -webkit-text-stroke: 1.5px #ffb100;
+  -webkit-text-fill-color: white; */
   }
 }
 
