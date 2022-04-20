@@ -9,13 +9,25 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript">
         $(window).bind("load resize scroll", function() {
-  $(".bg-static").each(function() {
+  $(".lower").each(function() {
+    var div1 = document.getElementsByClassName("profiles")[0];
+    var div2 = document.getElementsByClassName("bg-move")[0];
+    var rect1 = div1.getBoundingClientRect();
+    var rect2 = div2.getBoundingClientRect();
+    var width = window.innerWidth;
     var windowTop = $(window).scrollTop();
     var elementTop = $(this).offset().top;
     var leftPosition = elementTop - windowTop ;
+    // console.log(leftPosition /width);
+    if(leftPosition > (rect1.left-rect1.width/2)/(7)){
       $(this)
         .find(".bg-move")
-        .css({ right: leftPosition });
+        .css({ left: leftPosition});
+    } else{
+      $(this)
+        .find(".bg-move")
+        .css({ left: (rect1.left-rect1.width/2)/(7)});
+    }
   });
   });
     </script>
@@ -35,16 +47,23 @@
   var elementTop = $(this).offset().top;
   var leftPositionA = elementTop - windowTop*1100/width ;
   var leftPositionB = elementTop - windowTop*1700/width  ;
-  console.log(leftPositionA /width);
   if(leftPositionB/width > -0.02){
     $(this)
       .find(".winebg")
       .css({ left: leftPositionB });
+  } else {
+    $(this)
+      .find(".winebg")
+      .css({ left: width * -0.02 });
   }
-  if(leftPositionA /width > 0.175){
+  if(leftPositionA/width > 0.175){
     $(this)
       .find(".beerbg")
       .css({ right: leftPositionA });
+  } else {
+    $(this)
+      .find(".beerbg")
+      .css({ right: width*0.175 });
   }
     // $(this)
     //   .find(".cheers")
@@ -53,7 +72,28 @@
     })});
 </script>
 <script type="text/javascript">
+  $(window).bind("load resize scroll", function() {
+  $(".community").each(function() {
+  var div1 = document.getElementsByClassName("text")[0];
+
+  var rect1 = div1.getBoundingClientRect();
   
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var windowTop = $(window).scrollTop();
+  var elementTop = $(this).offset().top;
+  var leftPosition = elementTop - windowTop*300/width ;
+  console.log(rect1.left/width);
+  if(leftPosition/width > 0.66){
+    $(this)
+      .find(".text")
+      .css({ left: leftPosition })
+  } else {
+    $(this)
+      .find(".text")
+      .css({ left: width*0.66 })
+  }
+  })})
 </script>
 
     <!-- favicon -->
@@ -129,6 +169,11 @@
             </a>
           </div>
       </div>
+      <div class="text">
+      <h1>JOIN
+          OUR
+        COMMUNITY</h1>
+      </div>
     </section>
 
     <div class="shelf">
@@ -146,9 +191,8 @@
       <div class="profilespair">  
       <div class="W">
       <a
-      href="https://twitter.com/nftmaso"
-      class="lazyboys">
-      <img src="images/x-icon/tommy.png" alt="Twitter" id="profile" />
+      href="https://twitter.com/nftmaso">
+      <img src="images/x-icon/tommy.png" alt="Twitter" id="profile" class="lazyboys"/>
     </a>
         <h2>Tommaso</h2>
         <p>Head engineer</p>
@@ -157,7 +201,7 @@
           <a
           href="https://twitter.com/Felixnftjourney"
           class="lazyboys">
-          <img src="images/x-icon/felix.png" alt="Twitter" id="profile" />
+          <img src="images/x-icon/felix.png" alt="Twitter" id="profile" class="lazyboys"/>
         </a>
         <h2>Felix</h2>
         <p>Project Manager</p>
@@ -168,7 +212,7 @@
           <a
           href="https://twitter.com/NThjelmer"
           class="lazyboys">
-          <img src="images/x-icon/hjalle.png" alt="Twitter" id="profile" />
+          <img src="images/x-icon/hjalle.png" alt="Twitter" id="profile" class="lazyboys"/>
         </a>
         <h2>Hjalmar</h2>
         <p>Marketing advisor</p>
@@ -177,7 +221,7 @@
           <a
           href="https://twitter.com/NFTLudvig"
           class="lazyboys">
-          <img src="images/x-icon/ludde.png" alt="Twitter" id="profile" />
+          <img src="images/x-icon/ludde.png" alt="Twitter" id="profile" class="lazyboys"/>
         </a>
         <h2>Ludvig</h2>
         <p>Business Advisor</p>
