@@ -19,6 +19,17 @@
     var elementTop = $(this).offset().top;
     var leftPosition = elementTop - windowTop ;
     // console.log(leftPosition /width);
+    if(width < 1000){
+    if(leftPosition > (rect1.left-rect1.width/2)/(2)){
+      $(this)
+        .find(".bg-move")
+        .css({ left: leftPosition});
+    } else{
+      $(this)
+        .find(".bg-move")
+        .css({ left: (rect1.left-rect1.width/2)/(2)});
+    }
+  } else {
     if(leftPosition > (rect1.left-rect1.width/2)/(7)){
       $(this)
         .find(".bg-move")
@@ -28,8 +39,10 @@
         .find(".bg-move")
         .css({ left: (rect1.left-rect1.width/2)/(7)});
     }
+  }
   });
   });
+  
     </script>
     <script type="text/javascript">
       $(window).bind("load resize scroll", function() {
