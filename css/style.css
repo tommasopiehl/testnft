@@ -480,6 +480,11 @@ ul li {
 }
 
 @media (max-width: 900px){
+
+  html{
+    overflow-x: hidden;
+  }
+
   .comingsoon .colitem h2{
     font-family: var(--font-primary);
     font-size:1.5em;
