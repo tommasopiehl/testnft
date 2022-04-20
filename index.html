@@ -18,28 +18,31 @@
     var windowTop = $(window).scrollTop();
     var elementTop = $(this).offset().top;
     var leftPosition = elementTop - windowTop ;
-    // console.log(leftPosition /width);
-    if(width < 1000){
-    if(leftPosition > (rect1.left-rect1.width/2)/(2)){
-      $(this)
-        .find(".bg-move")
-        .css({ left: leftPosition});
-    } else{
-      $(this)
-        .find(".bg-move")
-        .css({ left: (rect1.left-rect1.width/2)/(2)});
-    }
-  } else {
-    if(leftPosition > (rect1.left-rect1.width/2)/(7)){
-      $(this)
-        .find(".bg-move")
-        .css({ left: leftPosition});
-    } else{
-      $(this)
-        .find(".bg-move")
-        .css({ left: (rect1.left-rect1.width/2)/(7)});
-    }
-  }
+    $(this)
+    .find(".bg-move")
+    .css({ left: (rect1.left-rect1.width/2)/(2)});
+
+  //   if(width < 1000){
+  //   if(leftPosition > (rect1.left-rect1.width/2)/(2)){
+  //     $(this)
+  //       .find(".bg-move")
+  //       .css({ left: leftPosition});
+  //   } else{
+  //     $(this)
+  //       .find(".bg-move")
+  //       .css({ left: (rect1.left-rect1.width/2)/(2)});
+  //   }
+  // } else {
+  //   if(leftPosition > (rect1.left-rect1.width/2)/(7)){
+  //     $(this)
+  //       .find(".bg-move")
+  //       .css({ left: leftPosition});
+  //   } else{
+  //     $(this)
+  //       .find(".bg-move")
+  //       .css({ left: (rect1.left-rect1.width/2)/(7)});
+  //   }
+  // }
   });
   });
   
@@ -60,24 +63,30 @@
   var elementTop = $(this).offset().top;
   var leftPositionA = elementTop - windowTop*1100/width ;
   var leftPositionB = elementTop - windowTop*1700/width  ;
-  if(leftPositionB/width > -0.02){
-    $(this)
-      .find(".winebg")
-      .css({ left: leftPositionB });
-  } else {
-    $(this)
+  $(this)
       .find(".winebg")
       .css({ left: width * -0.02 });
-  }
-  if(leftPositionA/width > 0.175){
-    $(this)
-      .find(".beerbg")
-      .css({ right: leftPositionA });
-  } else {
-    $(this)
+      $(this)
       .find(".beerbg")
       .css({ right: width*0.175 });
-  }
+  // if(leftPositionB/width > -0.02){
+  //   $(this)
+  //     .find(".winebg")
+  //     .css({ left: leftPositionB });
+  // } else {
+  //   $(this)
+  //     .find(".winebg")
+  //     .css({ left: width * -0.02 });
+  // }
+  // if(leftPositionA/width > 0.175){
+  //   $(this)
+  //     .find(".beerbg")
+  //     .css({ right: leftPositionA });
+  // } else {
+  //   $(this)
+  //     .find(".beerbg")
+  //     .css({ right: width*0.175 });
+  // }
     // $(this)
     //   .find(".cheers")
     //   .css({ right: leftPositionB*0.8});
@@ -96,16 +105,18 @@
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
   var leftPosition = elementTop - windowTop*300/width ;
-  console.log(rect1.left/width);
-  if(leftPosition/width > 0.66){
-    $(this)
-      .find(".text")
-      .css({ left: leftPosition })
-  } else {
-    $(this)
+  $(this)
       .find(".text")
       .css({ left: width*0.66 })
-  }
+  // if(leftPosition/width > 0.66){
+  //   $(this)
+  //     .find(".text")
+  //     .css({ left: leftPosition })
+  // } else {
+  //   $(this)
+  //     .find(".text")
+  //     .css({ left: width*0.66 })
+  // }
   })})
 </script>
 
