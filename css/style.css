@@ -285,6 +285,7 @@ ul li {
 
 .comingsoon .moving .beerbg{
   position: absolute;
+  transition: transform .2s ease-in-out;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -295,10 +296,9 @@ ul li {
   background-repeat: no-repeat;
 }
 
-
-
 .comingsoon .moving .winebg{
   position: absolute;
+  transition: transform .2s ease-in-out;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -396,6 +396,7 @@ ul li {
 
 .lower .bg-move {
   position: absolute;
+  transition: transform .2s ease-in-out;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -505,6 +506,7 @@ ul li {
 
   .lower .bg-move {
     position: absolute;
+    transition: transform .2s ease-in-out;
     top: 0;
     bottom: 0;
     width: 1000px;
@@ -516,6 +518,7 @@ ul li {
 
   .community .text h1{
     font-family: var(--font-primary);
+    transition: transform .2s ease-in-out;
     font-size:1.5rem;
     font-style: italic;
     color:rgb(255, 137, 174);

@@ -57,8 +57,13 @@
   var height = window.innerHeight;
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
+  if(width < 500){
   var leftPositionA = elementTop - windowTop*1100/width ;
-  var leftPositionB = elementTop - windowTop*1700/width  ;
+  var leftPositionB = elementTop - windowTop*1700/width ;
+  } else {
+  var leftPositionA = elementTop - windowTop*1800/width ;
+  var leftPositionB = elementTop - windowTop*2200/width ;
+  }
   if(leftPositionB/width > -0.02){
     $(this)
       .find(".winebg")
@@ -158,9 +163,9 @@
   </div>
     <!--  -->
     <div class="moving">
-      <div class="cheers">
+      <!-- <div class="cheers">
         <img id="cheers" src="images/x-icon/cheers.png">
-      </div>
+      </div> -->
       <div class="beerbg"></div>
       <div class="winebg"></div>
     </div>
