@@ -54,22 +54,11 @@
   var height = window.innerHeight;
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
-  var leftPositionA = windowTop ;
-  if(leftPositionA/width > 0.083){
-    if(leftPositionA/width < 0.35){
+  var leftPositionA = elementTop - windowTop ;
     $(this)
       .find(".beerbg")
-      .css({ right: leftPositionA });
-  } else{
-    $(this)
-      .find(".beerbg")
-      .css({ right: 0.35*width });
-  }
-  } else {
-    $(this)
-      .find(".beerbg")
-      .css({ right: 0.083*width });
-  }
+      .css({ left: -leftPositionA+100 });
+
     })});
 </script>
 <script type="text/javascript">
@@ -84,25 +73,18 @@
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
   var leftPositionB = windowTop ;
-  console.log(leftPositionB);
-  if(leftPositionB/width < 0.7){
-    if(leftPositionB/width > 0.441){
+  if(width < 800){
     $(this)
       .find(".beerbg")
-      .css({ left: leftPositionB });
-    } else {
-      $(this)
-      .find(".beerbg")
-      .css({ left: width*0.441 });
-    }
+      .css({ left: -leftPositionB+140 });
   } else {
-      $(this)
+    $(this)
       .find(".beerbg")
-      .css({ left: width*0.7});
-    }
+      .css({ left: -leftPositionB+450 });
+  }
   })});
 </script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   $(window).bind("load resize scroll", function() {
   $(".community").each(function() {
   var div1 = document.getElementsByClassName("text")[0];
@@ -130,7 +112,7 @@
       .css({ right: width*0.35 })
   }
   })})
-</script> -->
+</script>
 
     <!-- favicon -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png">
@@ -202,6 +184,12 @@
               ><img src="images/x-icon/discordlink.PNG" id="biglink" />
             </a>
           </div>
+      </div>
+      <div class="text">
+        <h1>JOIN
+          OUR
+          COMMUNITY
+        </h1>
       </div>
     </section>
 
