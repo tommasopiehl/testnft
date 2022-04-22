@@ -25,6 +25,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   position: relative;
   background-color: #e4f2ff;
@@ -32,8 +34,7 @@ body {
   flex-flow: column;
   max-height: 100vh;
   color: var(--font-color);
-  overflow: hidden;
-  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #headlogo{
