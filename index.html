@@ -5,7 +5,7 @@
     <title>LazyLabels</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript">
         $(window).bind("load resize scroll", function() {
@@ -45,48 +45,62 @@
     </script>
     <script type="text/javascript">
       $(window).bind("load resize scroll", function() {
-  $(".moving").each(function() {
+  $(".movingA").each(function() {
   var div1 = document.getElementsByClassName("beerbg")[0];
-  var div2 = document.getElementsByClassName("winebg")[0];
 
   var rect1 = div1.getBoundingClientRect();
-  var rect2 = div2.getBoundingClientRect();
   
     
   var width = window.innerWidth;
   var height = window.innerHeight;
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
-  if(width < 500){
-  var leftPositionA = elementTop - windowTop*1100/width ;
-  var leftPositionB = elementTop - windowTop*1700/width ;
-  } else {
-  var leftPositionA = elementTop - windowTop*1800/width ;
-  var leftPositionB = elementTop - windowTop*2200/width ;
-  }
-  if(leftPositionB/width > -0.02){
-    $(this)
-      .find(".winebg")
-      .css({ left: leftPositionB });
-  } else {
-    $(this)
-      .find(".winebg")
-      .css({ left: width * -0.02 });
-  }
-  if(leftPositionA/width > 0.175){
+  var leftPositionA = elementTop - windowTop*1000/width ;
+  if(leftPositionA/width > 0.083){
+    if(leftPositionA/width < 0.35){
     $(this)
       .find(".beerbg")
       .css({ right: leftPositionA });
+  } else{
+    $(this)
+      .find(".beerbg")
+      .css({ right: 0.35*width });
+  }
   } else {
     $(this)
       .find(".beerbg")
-      .css({ right: width*0.175 });
+      .css({ right: 0.083*width });
   }
-    // $(this)
-    //   .find(".cheers")
-    //   .css({ right: leftPositionB*0.8});
-  
     })});
+</script>
+<script type="text/javascript">
+  $(window).bind("load resize scroll", function() {
+  $(".movingB").each(function() {
+  var div2 = document.getElementsByClassName("beerbg")[0];
+
+  var rect2 = div2.getBoundingClientRect();
+
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var windowTop = $(window).scrollTop();
+  var elementTop = $(this).offset().top;
+  var leftPositionB = elementTop - windowTop*1000/width ;
+  if(-leftPositionB/width < -0.425){
+    if(-leftPositionB/width > -0.7){
+  $(this)
+    .find(".beerbg")
+    .css({ right: -leftPositionB});
+  } else {
+    $(this)
+    .find(".beerbg")
+    .css({ right: width*-0.7});
+  }
+} else {
+    $(this)
+    .find(".beerbg")
+    .css({ right: width*-0.425});
+  }
+  })});
 </script>
 <script type="text/javascript">
   $(window).bind("load resize scroll", function() {
@@ -99,16 +113,22 @@
   var height = window.innerHeight;
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
-  var leftPosition = elementTop - windowTop*300/width ;
-  console.log(rect1.left/width);
-  if(leftPosition/width > 0.66){
+  var leftPosition = elementTop - windowTop*900/width ;
+  console.log(leftPosition/width);
+  if(leftPosition/width > 0.35){
+    if(leftPosition/width < 0.52){
     $(this)
       .find(".text")
-      .css({ left: leftPosition })
+      .css({ right: leftPosition })
   } else {
     $(this)
       .find(".text")
-      .css({ left: width*0.66 })
+      .css({ right: width*0.52 })
+  }
+} else {
+    $(this)
+      .find(".text")
+      .css({ right: width*0.35 })
   }
   })})
 </script>
@@ -153,6 +173,9 @@
     </section>
 
     <section class="comingsoon">
+      <div class="movingA">
+        <div class="beerbg"></div>
+    </div>
     <div class="colitem">
     <h2>ABOUT</h2>
     <p>Lazy Labels is a completely art-based project in which we hope to
@@ -161,16 +184,11 @@
       Follow us on twitter and look out for our discord server to find out more.
   </p>
   </div>
-    <!--  -->
-    <div class="moving">
-      <!-- <div class="cheers">
-        <img id="cheers" src="images/x-icon/cheers.png">
-      </div> -->
-      <div class="beerbg"></div>
-      <div class="winebg"></div>
-    </div>
-    </div>
+  <div class="movingB">
+    <div class="beerbg"></div>
+  </div>
   </section>
+
     
 
       <section class="community">

@@ -25,10 +25,6 @@
   box-sizing: border-box;
 }
 
-html{
-  overflow-x: hidden;
-}
-
 body {
   position: relative;
   background-color: #e4f2ff;
@@ -36,6 +32,8 @@ body {
   flex-flow: column;
   max-height: 100vh;
   color: var(--font-color);
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 #headlogo{
@@ -226,21 +224,20 @@ ul li {
   list-style-type: none;  
 }
 
-
 .comingsoon{
   position: relative;
-  padding: 2%;
   width: 100%;
+  padding: 2%;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .comingsoon .colitem{
   display: flex;
-  width: 30%;
+  width: 60%;
   flex-direction: column;
   align-items: center;
   flex: 1;
@@ -250,7 +247,7 @@ ul li {
   z-index: 1;
   background-image: url("stainsmall.PNG");
   background-position: center;
-  background-size: 80%;
+  background-size: 65%;
   background-repeat: no-repeat;
   z-index: 3;
 }
@@ -263,12 +260,21 @@ ul li {
 }
 
 .comingsoon .colitem p{
+  width: 100%;
   font-family: var(--font-secondary);
   font-size: 2em;
   text-align: center;
 }
 
-.comingsoon .moving{
+.comingsoon .movingA{
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex: 1;
+}
+
+.comingsoon .movingB{
   height: 100%;
   display: flex;
   align-items: center;
@@ -276,14 +282,7 @@ ul li {
   flex: 1;
 }
 
-.comingsoon .moving .cheers{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 50%;
-}
-
-.comingsoon .moving .beerbg{
+.comingsoon .movingA .beerbg{
   position: absolute;
   transition: transform .2s ease-in-out;
   top: 0;
@@ -292,19 +291,19 @@ ul li {
   background-image: url("beerglass.PNG");
   background-size: 30%;
   background-position-y: 50%;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-.comingsoon .moving .winebg{
+.comingsoon .movingB .beerbg{
+  transform: scaleX(-1);
   position: absolute;
   transition: transform .2s ease-in-out;
   top: 0;
   bottom: 0;
   width: 100%;
-  background-image: url("wineglass.PNG");
+  background-image: url("beerglass.PNG");
   background-size: 30%;
-  background-position-y: 50%;
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -328,10 +327,11 @@ ul li {
 }
 
 .community .text{
-  width: 20%;
+  width: 0%;
   position: absolute;
   display: flex;
   flex-direction: column;
+  z-index: -5;
 }
 
 .community .text h1{
