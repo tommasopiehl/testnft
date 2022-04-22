@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         $(window).bind("load resize scroll", function() {
   $(".lower").each(function() {
     var div1 = document.getElementsByClassName("profiles")[0];
@@ -42,7 +42,7 @@
   });
   });
   
-    </script> -->
+    </script>
     <script type="text/javascript">
       $(window).bind("load resize scroll", function() {
   $(".movingA").each(function() {
@@ -50,12 +50,11 @@
 
   var rect1 = div1.getBoundingClientRect();
   
-    
   var width = window.innerWidth;
   var height = window.innerHeight;
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
-  var leftPositionA = elementTop - windowTop*1000/width ;
+  var leftPositionA = windowTop ;
   if(leftPositionA/width > 0.083){
     if(leftPositionA/width < 0.35){
     $(this)
@@ -84,25 +83,26 @@
   var height = window.innerHeight;
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
-  var leftPositionB = elementTop - windowTop*1000/width ;
-  if(-leftPositionB/width < -0.425){
-    if(-leftPositionB/width > -0.7){
-  $(this)
-    .find(".beerbg")
-    .css({ right: -leftPositionB});
+  var leftPositionB = windowTop ;
+  console.log(leftPositionB);
+  if(leftPositionB/width < 0.7){
+    if(leftPositionB/width > 0.441){
+    $(this)
+      .find(".beerbg")
+      .css({ left: leftPositionB });
+    } else {
+      $(this)
+      .find(".beerbg")
+      .css({ left: width*0.441 });
+    }
   } else {
-    $(this)
-    .find(".beerbg")
-    .css({ right: width*-0.7});
-  }
-} else {
-    $(this)
-    .find(".beerbg")
-    .css({ right: width*-0.425});
-  }
+      $(this)
+      .find(".beerbg")
+      .css({ left: width*0.7});
+    }
   })});
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $(window).bind("load resize scroll", function() {
   $(".community").each(function() {
   var div1 = document.getElementsByClassName("text")[0];
@@ -114,7 +114,6 @@
   var windowTop = $(window).scrollTop();
   var elementTop = $(this).offset().top;
   var leftPosition = elementTop - windowTop*900/width ;
-  console.log(leftPosition/width);
   if(leftPosition/width > 0.35){
     if(leftPosition/width < 0.52){
     $(this)
@@ -131,7 +130,7 @@
       .css({ right: width*0.35 })
   }
   })})
-</script>
+</script> -->
 
     <!-- favicon -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png">
@@ -158,7 +157,7 @@
     </header>
 
 
-    <!-- <section class="banner">
+    <section class="banner">
     <div class="banner_wrapper">
       <div class="moving-content">
         <ul id="group-1">
@@ -166,7 +165,7 @@
         </ul>
       </div>
     </div>
-  </section> -->
+  </section>
 
     <section class="top">
       <img id="top" src="images/x-icon/newbanner.png">
@@ -194,8 +193,8 @@
       <section class="community">
         <div class="rowitem">
         <div class="link">
-        <a href="https://twitter.com/lazylabelsNFT" target="_blank" rel="noopener noreferrer"
-            ><img src="images/x-icon/twitterlink.PNG" id="biglinkA" />
+        <a href="https://twitter.com/lazylabelsNFT" target="_blank" rel="noopener noreferrer">
+          <img src="images/x-icon/twitterlink.PNG" id="biglinkA" />
           </a>
         </div>
         <div class="linkB">
@@ -204,11 +203,6 @@
             </a>
           </div>
       </div>
-      <div class="text">
-      <h1>JOIN
-          OUR
-        COMMUNITY</h1>
-      </div>
     </section>
 
     <div class="shelf">
@@ -216,9 +210,9 @@
     </div>
 
       <section class="lower">
-        <!-- <div class="bg-static">
+        <div class="bg-static">
           <div class="bg-move"></div>
-        </div> -->
+        </div>
         <div class="profileslogo">
           <img src="images/x-icon/thelazyboys.PNG" id="boyslogo" />
         </div>
