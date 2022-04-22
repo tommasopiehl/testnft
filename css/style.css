@@ -33,7 +33,7 @@ body {
   max-height: 100vh;
   color: var(--font-color);
   overflow: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 #headlogo{
