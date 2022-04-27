@@ -172,7 +172,7 @@ html, body {
 
 .banner_wrapper .cloud-1 h2{
   position: absolute;
-  padding-bottom: 70px;
+  /* padding-bottom: 70px; */
   min-width: 1000px;
   font-size: 250%;
   font-family: var(--font-primary);
